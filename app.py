@@ -24,9 +24,9 @@ def water_jug_bfs(capA, capB, target):
         
         moves = [
             (capA, b),  
-            (a, capB),  
-            (0, b),     
-            (a, 0),    
+            (a, capB), 
+            (0, b),    
+            (a, 0),     
             (min(capA, a + b), max(0, a + b - capA)),  
             (max(0, a + b - capB), min(capB, a + b))   
         ]
@@ -38,7 +38,6 @@ def water_jug_bfs(capA, capB, target):
                 queue.append(move)
 
     return None
-
 
 
 capA = 4
@@ -53,3 +52,4 @@ if solution:
         print(step)
 else:
     print("No solution found")
+
